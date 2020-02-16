@@ -1,4 +1,4 @@
-@import '../../assets/color.scss';
+@import "../../assets/color.scss";
 #page-meeting {
   background: $dark-cyan;
   height: 100%;
@@ -20,7 +20,7 @@
       &-logo {
         width: 4.29rem;
         height: 2.5rem;
-        margin-right: .86rem;
+        margin-right: 0.86rem;
       }
     }
     &-footer {
@@ -32,18 +32,19 @@
       }
     }
     &-container {
-      width: calc(100% - 4.29rem);
-      height: 100%;
-      margin: 0 auto;
+      flex: calc(25% - 4.29rem);
+      margin: 0;
+      padding: 0;
       background: rgb(52, 72, 88);
       border-radius: 0.86rem;
-      position: relative;
+      // position: relative;
+      // align-items: left;
     }
     /* button group */
     &-btn-group {
       height: 5rem;
-      width: 100%;
-      margin: 0 auto;
+      width: 25%;
+      // margin: 0 auto;
       position: absolute;
       bottom: 0;
       background: transparent;
@@ -53,7 +54,7 @@
       align-items: center;
       &:hover,
       &.active {
-        background: rgba(18, 74, 99, .8);
+        background: rgba(18, 74, 99, 0.8);
         .ag-btn {
           opacity: 1;
         }
@@ -72,11 +73,11 @@
         line-height: 35px;
       }
       &:hover {
-        color: #00B6ED;
+        color: #00b6ed;
       }
       &.disabled,
       &.disabled:hover {
-        color: rgba(255, 255, 255, .56) !important;
+        color: rgba(255, 255, 255, 0.56) !important;
         cursor: not-allowed;
       }
       &.off {
@@ -105,15 +106,26 @@
       }
     }
   }
+
+  .flex-container {
+    width: 100%;
+    height: calc(100% - 4.29rem);
+    display: flex;
+    flex-direction: row;
+  }
+
+  .document {
+    flex: calc(75% - 4.29rem);
+  }
+
   .video-item {
-    border-radius: .5rem;
-    border: .14rem $light-blue solid;
-    background: url('../../assets/images/avatar.png') center no-repeat;
+    border-radius: 0.5rem;
+    border: 0.14rem $light-blue solid;
+    background: url("../../assets/images/avatar.png") center no-repeat;
     height: 100%;
     width: 100%;
-    position: relative;
     div {
-      border-radius: .5rem
+      border-radius: 0.5rem;
     }
   }
 }
